@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% block title %}Assessment - Question {{ question_number }} - MindWell Navigator{% endblock %} {% block content %}
+<section class="assessment-question-section"> <div class="progress-container">  <div class="progress-bar" style="width: {{ (question_number / total_questions) * 100 }}%;"> Question {{ question_number }} of {{ total_questions }} </div>
+    </div>
+
+    <div class="spline-canvas-container" style="height: 100px; margin-bottom: 1rem;">
+        {#
+           IMPORTANT:
+           1. Create your progress indicator animation in Spline.
+           2. Export it and get the scene URL.
+           3. Replace the placeholder URL below.
+           4. The `spline_integrations.js` file has an `updateAssessmentProgress` function
+              that will be called. You need to customize this function to interact
+              with the specific elements/variables/animations in YOUR Spline scene.
+        #}
+        <canvas id="splineProgressCanvas" data-spline-url="YOUR_PROGRESS_SPLINE_SCENE_URL_HERE"></canvas>
+    </div>
+
+
+    <h2>{{ question.category }}</h2> <form method="POST" action="{{ url_for('assessment_question') }}"> <input type="hidden" name="question_id" value="{{ question.id }}"> <fieldset>
+            <legend class="question-text">{{ question.text }}</legend> <div class="options-group"> {% for option in question.options %} <div class="option"> <input type="radio" id="option_{{ loop.index }}" name="answer_value" value="{{ option.value }}" required> <label for="option_{{ loop.index }}">{{ option.text }}</label> </div>
+                {% endfor %}
+            </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary btn-next">Next <span class="arrow">&rarr;</span></button> </form>
+    {% if question_number > 1 %} {# Removed back button logic as per original, can be added if needed #}
+    {% endif %}
+</section>
+{% endblock %}
+
+{% block scripts_extra %}
+<script type="module">
+    // Ensure the DOM is loaded before trying to access elements for progress
+    document.addEventListener('DOMContentLoaded', () => {
+        // Update Spline progress when the page loads/reloads for a question
+        // The main logic is in spline_integrations.js, this just ensures it's called
+        // if the progress bar element itself is updated by Flask/Jinja
+        const progressBarElement = document.querySelector('.progress-bar');
+        if (progressBarElement && progressBarElement.style.width) {
+            const currentProgress = parseFloat(progressBarElement.style.width);
+            if (!isNaN(currentProgress) && window.updateAssessmentProgress) { // Check if function exists
+                window.updateAssessmentProgress(currentProgress);
+            }
+        }
+    });
+</script>
+{% endblock %}

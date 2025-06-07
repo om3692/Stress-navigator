@@ -1,0 +1,146 @@
+{
+    "categories": [
+        "Stress",
+        "Anxiety",
+        "Sleep Quality",
+        "Motivation",
+        "Focus",
+        "Emotional Well-being"
+    ],
+    "questions": [
+        {
+            "id": "stress_q1",
+            "text": "Over the last two weeks, how often have you felt overwhelmed by your responsibilities?",
+            "category": "Stress",
+            "options": [
+                {"text": "Not at all", "value": 0},
+                {"text": "Several days", "value": 1},
+                {"text": "More than half the days", "value": 2},
+                {"text": "Nearly every day", "value": 3}
+            ]
+        },
+        {
+            "id": "stress_q2",
+            "text": "In the past two weeks, how often have you found it difficult to manage an unexpected problem or change?",
+            "category": "Stress",
+            "options": [
+                {"text": "Not at all", "value": 0},
+                {"text": "Several days", "value": 1},
+                {"text": "More than half the days", "value": 2},
+                {"text": "Nearly every day", "value": 3}
+            ]
+        },
+        {
+            "id": "anxiety_q1",
+            "text": "Over the last two weeks, how often have you been bothered by feeling nervous, anxious, or on edge?",
+            "category": "Anxiety",
+            "options": [
+                {"text": "Not at all", "value": 0},
+                {"text": "Several days", "value": 1},
+                {"text": "More than half the days", "value": 2},
+                {"text": "Nearly every day", "value": 3}
+            ]
+        },
+        {
+            "id": "anxiety_q2",
+            "text": "In the past two weeks, how often have you found yourself worrying too much about different things?",
+            "category": "Anxiety",
+            "options": [
+                {"text": "Not at all", "value": 0},
+                {"text": "Several days", "value": 1},
+                {"text": "More than half the days", "value": 2},
+                {"text": "Nearly every day", "value": 3}
+            ]
+        },
+        {
+            "id": "sleep_q1",
+            "text": "How would you rate your overall sleep quality over the past week?",
+            "category": "Sleep Quality",
+            "options": [
+                {"text": "Very Good", "value": 0},
+                {"text": "Good", "value": 1},
+                {"text": "Fair", "value": 2},
+                {"text": "Poor", "value": 3},
+                {"text": "Very Poor", "value": 4}
+            ]
+        },
+        {
+            "id": "sleep_q2",
+            "text": "Over the past week, how often have you had trouble falling asleep or staying asleep?",
+            "category": "Sleep Quality",
+            "options": [
+                {"text": "Not at all / Rarely", "value": 0},
+                {"text": "Sometimes (1-2 nights)", "value": 1},
+                {"text": "Often (3-4 nights)", "value": 2},
+                {"text": "Almost always (5-7 nights)", "value": 3}
+            ]
+        },
+        {
+            "id": "motivation_q1",
+            "text": "Over the last two weeks, how often have you had little interest or pleasure in doing things you normally enjoy?",
+            "category": "Motivation",
+            "options": [
+                {"text": "Not at all", "value": 0},
+                {"text": "Several days", "value": 1},
+                {"text": "More than half the days", "value": 2},
+                {"text": "Nearly every day", "value": 3}
+            ]
+        },
+        {
+            "id": "motivation_q2",
+            "text": "In the past two weeks, how often have you found it hard to get started on tasks you need to do?",
+            "category": "Motivation",
+            "options": [
+                {"text": "Not at all", "value": 0},
+                {"text": "Several days", "value": 1},
+                {"text": "More than half the days", "value": 2},
+                {"text": "Nearly every day", "value": 3}
+            ]
+        },
+        {
+            "id": "focus_q1",
+            "text": "During the past week, how often did you find it hard to concentrate on tasks, such as reading or work?",
+            "category": "Focus",
+            "options": [
+                {"text": "Rarely or none of the time", "value": 0},
+                {"text": "Some or a little of the time", "value": 1},
+                {"text": "Occasionally or a moderate amount of time", "value": 2},
+                {"text": "Most or all of the time", "value": 3}
+            ]
+        },
+        {
+            "id": "focus_q2",
+            "text": "In the past week, how often did you feel easily distracted from what you were doing?",
+            "category": "Focus",
+            "options": [
+                {"text": "Rarely or none of the time", "value": 0},
+                {"text": "Some or a little of the time", "value": 1},
+                {"text": "Occasionally or a moderate amount of time", "value": 2},
+                {"text": "Most or all of the time", "value": 3}
+            ]
+        },
+        {
+            "id": "wellbeing_q1",
+            "text": "Overall, how would you describe your general mood over the past two weeks?",
+            "category": "Emotional Well-being",
+            "options": [
+                {"text": "Very good, consistently positive", "value": 0},
+                {"text": "Mostly good, some ups and downs", "value": 1},
+                {"text": "Fair, quite a few down moments", "value": 2},
+                {"text": "Mostly low, significant struggles", "value": 3},
+                {"text": "Very low, feeling quite distressed", "value": 4}
+            ]
+        },
+        {
+            "id": "wellbeing_q2",
+            "text": "In the past two weeks, how often have you felt hopeful about your future?",
+            "category": "Emotional Well-being",
+            "options": [
+                {"text": "Nearly every day", "value": 0},
+                {"text": "More than half the days", "value": 1},
+                {"text": "Several days", "value": 2},
+                {"text": "Not at all", "value": 3}
+            ]
+        }
+    ]
+}

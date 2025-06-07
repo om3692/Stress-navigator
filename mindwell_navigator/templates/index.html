@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% block title %}Welcome - MindWell Navigator{% endblock %} {% block content %}
+<section class="welcome-section text-center"> <div class="spline-canvas-container" style="height: 300px; margin-bottom: 2rem;">
+        {#
+           IMPORTANT:
+           1. Go to spline.design and create your welcome animation.
+           2. Export it (preferably as "Code Export" -> "Vanilla JS").
+           3. Get the scene URL (e.g., "https://prod.spline.design/xxxx/scene.splinecode").
+           4. Replace the placeholder URL below.
+        #}
+        <canvas id="splineWelcomeCanvas" data-spline-url="YOUR_WELCOME_SPLINE_SCENE_URL_HERE"></canvas>
+    </div>
+
+    <h2>Welcome to MindWell Navigator</h2> <p class="lead">
+        Your personal guide to understanding and enhancing your mental well-being.
+    </p> <p>
+        This short, thoughtful assessment is designed to help you reflect on your current state across key areas
+        like stress, anxiety, sleep, and focus. Our aim is to provide you with a moment of self-awareness
+        and offer gentle, evidence-based suggestions in a supportive and judgment-free space.
+    </p> <p>
+        <strong>This is not a diagnostic tool.</strong> The insights provided are for informational purposes only
+        and should not be considered a substitute for professional medical advice, diagnosis, or treatment.
+        If you have concerns about your mental health, please consult with a qualified healthcare provider.
+    </p> <a href="{{ url_for('consent') }}" class="btn btn-primary btn-large">Begin Your Journey</a> </section>
+{% endblock %}

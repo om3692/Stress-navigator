@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block title %}Your Wellness Summary - MindWell Navigator{% endblock %}
+
+{% block content %}
+<section class="results-section">
+    <h2>Your Personalized Wellness Snapshot</h2>
+    
+    <div class="summary-card card">
+        <h3>Overall Summary</h3>
+        <p>{{ summary }}</p>
+    </div>
+
+    {% if insights %}
+    <div class="insights-container card-deck">
+        <h3>Category Insights:</h3>
+        {% for category, insight_text in insights.items() %}
+        <div class="insight-card card">
+            <h4>{{ category }}</h4>
+            <p>{{ insight_text }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if recommendations %}
+    <div class="recommendations-container">
+        <h3>Personalized Suggestions & Resources</h3>
+
+        {% if recommendations.specific_by_category %}
+        <div class="recommendation-category card">
+            <h4>Specific Suggestions Based on Your Responses:</h4>
+            {% for rec_item in recommendations.specific_by_category %}
+            <div class="recommendation-item">
+                <h5>For {{ rec_item.category }}:</h5>
+                <p>{{ rec_item.advice }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if recommendations.general_sleep_hygiene %}
+        <div class="recommendation-category card">
+            <h4>Sleep Hygiene Tips:</h4>
+            <ul>
+                {% for tip in recommendations.general_sleep_hygiene %}
+                <li><strong>{{ tip.name }}:</strong> {{ tip.description }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if recommendations.general_nutrition_tips %}
+        <div class="recommendation-category card">
+            <h4>Brain-Boosting Nutrition Tips:</h4>
+            <ul>
+                {% for tip in recommendations.general_nutrition_tips %}
+                <li><strong>{{ tip.name }}:</strong> {{ tip.description }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
+        {% if recommendations.general_cognitive_exercises %}
+        <div class="recommendation-category card">
+            <h4>Daily Cognitive Exercises:</h4>
+            <ul>
+                {% for exercise in recommendations.general_cognitive_exercises %}
+                <li><strong>{{ exercise.name }}:</strong> {{ exercise.description }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if recommendations.general_wellbeing %}
+            {# Check to avoid repeating the general wellbeing tip if it was already part of the main summary #}
+            {% set main_summary_lower = summary | lower %}
+            {% for tip_text in recommendations.general_wellbeing %}
+                {% if tip_text | lower not in main_summary_lower %}
+                <div class="recommendation-category card">
+                    <h4>General Well-being Tip:</h4>
+                    <p>{{ tip_text }}</p>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {# Digital tools are expected inside the 'recommendations' dict passed from the route #}
+        {% set digital_tools_list = recommendations.get("digital_tools", []) %}
+        
+        {# This fallback logic might be redundant if interpret_results always includes digital_tools #}
+        {# For safety, keeping a check. RECOMMENDATIONS_DATA here refers to a potential global from context processor if implemented #}
+        {# However, the error was caused by trying to serialize a global RECOMMENDATIONS_DATA, so better to rely on what's passed explicitly #}
+        {% if not digital_tools_list and RECOMMENDATIONS_DATA_GLOBAL and RECOMMENDATIONS_DATA_GLOBAL.digital_tools %}
+            {% set digital_tools_list = RECOMMENDATIONS_DATA_GLOBAL.digital_tools %}
+        {% endif %}
+
+
+        {% if digital_tools_list %}
+        <div class="recommendation-category card">
+            <h4>Curated Digital Tools & Resources:</h4>
+            <p>These are optional tools that many find helpful. Some may offer free trials or have free versions.</p>
+            <ul class="digital-tools-list">
+                {% for tool in digital_tools_list %}
+                <li>
+                    <strong><a href="{{ tool.link }}" target="_blank" rel="noopener noreferrer">{{ tool.name }}</a></strong>
+                    {% if tool.link_alt %}(or <a href="{{ tool.link_alt }}" target="_blank" rel="noopener noreferrer">alternative</a>){% endif %}:
+                    {{ tool.description }}
+                    {% if tool.category_tags %}<small class="tool-tags"><em>Relevant for: {{ tool.category_tags | join(", ") }}</em></small>{% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="important-reminder card">
+        <h3>Important Reminder</h3>
+        <p>This self-assessment is a starting point for self-reflection. The suggestions provided are for general well-being and are not a substitute for professional medical advice, diagnosis, or treatment. If you have ongoing concerns about your mental health, or if you are feeling distressed, please consult with a qualified healthcare provider or mental health professional.</p>
+        <p><strong>If you are in crisis, please contact emergency services immediately.</strong></p>
+    </div>
+
+    <div class="text-center go-home-link">
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Return to Homepage</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block head_extra %}
+<script>
+    {# This line was causing the "Undefined is not JSON serializable" error. #}
+    {# It's commented out as the main template uses the 'recommendations' dictionary passed from the route. #}
+    {# // const RECOMMENDATIONS_DATA_JS = {{ RECOMMENDATIONS_DATA | tojson | safe }}; #}
+    
+    // Any other JavaScript specific to the results page could go here if needed.
+</script>
+{% endblock %}

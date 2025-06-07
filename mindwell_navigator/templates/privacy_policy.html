@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}Privacy Policy - MindWell Navigator{% endblock %}
+
+{% block content %}
+<section class="static-page-section">
+    <h2>Privacy Policy</h2>
+    <p><em>Last Updated: {{ now.strftime('%B %d, %Y') }}</em></p>
+
+    <p>MindWell Navigator ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our web application (the "Service"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the service.</p>
+
+    <h3>1. Information We Collect</h3>
+    <p>We may collect information about you in a variety of ways. The information we may collect via the Service includes:</p>
+    <ul>
+        <li><strong>Session Data:</strong> When you start an assessment, we assign your browser session a unique, anonymous session identifier. This identifier is used to keep track of your progress through the assessment questions and to deliver your personalized results at the end of your current session. This session ID is temporary for the duration of your visit or may persist for a short period to allow you to complete an assessment if interrupted.</li>
+        <li><strong>Assessment Responses:</strong> We collect the answers you provide to the assessment questions. These responses are linked to your anonymous session identifier. We store the question ID, the text of the question, your selected answer's text, the numerical value of your answer, and the category of the question.</li>
+        <li><strong>Consent Information:</strong> We record that you have provided consent to the terms and disclaimers before starting an assessment, linked to your session ID.</li>
+        <li><strong>Usage Data:</strong> We may automatically collect standard information your browser sends, such as your IP address (which may be used to estimate your general location but is not stored with your specific responses in a directly identifiable way long-term without user accounts), browser type, operating system, access times, and referring website addresses. This information is used for system administration, to analyze trends, and to improve the Service.</li>
+        <li><strong>Aggregated and Anonymized Data:</strong> We may anonymize and aggregate the responses and usage data for research purposes, to understand mental wellness trends, and to improve the quality and effectiveness of our Service. This aggregated data will not personally identify you.</li>
+    </ul>
+    <p>Currently, MindWell Navigator does not require user registration or the creation of personal accounts. Therefore, we do not knowingly collect personally identifiable information (PII) such as your name, email address, or phone number, unless you were to voluntarily provide it through a contact form (not currently implemented).</p>
+
+    <h3>2. How We Use Your Information</h3>
+    <p>Having accurate information permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Service to:</p>
+    <ul>
+        <li>Administer the self-assessment and provide you with personalized feedback and recommendations.</li>
+        <li>Maintain your session and progress through the assessment.</li>
+        <li>Monitor and analyze usage and trends to improve your experience with the Service.</li>
+        <li>Improve the content, functionality, and offerings of the Service.</li>
+        <li>Compile anonymous statistical data and analysis for use internally or with third parties for research purposes (only in aggregated, de-identified form).</li>
+        <li>Ensure the security and integrity of our Service.</li>
+        <li>Comply with legal obligations.</li>
+    </ul>
+
+    <h3>3. Disclosure of Your Information</h3>
+    <p>We do not sell, trade, rent, or otherwise share your personal information or individual assessment responses with third parties for their marketing purposes.</p>
+    <p>We may share information we have collected about you in certain situations:</p>
+    <ul>
+        <li><strong>By Law or to Protect Rights:</strong> If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</li>
+        <li><strong>Service Providers:</strong> We may share your information with third-party vendors, service contractors, or agents who perform services for us or on our behalf and require access to such information to do that work (e.g., web hosting). These service providers will be obligated to protect your information.</li>
+        <li><strong>Aggregated/Anonymized Data:</strong> We may share aggregated and anonymized demographic information and analytics with partners for research or public health purposes. This data will not identify you personally.</li>
+    </ul>
+
+    <h3>4. Data Security</h3>
+    <p>We use administrative, technical, and physical security measures to help protect your information. While we have taken reasonable steps to secure the information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse. Any information disclosed online is vulnerable to interception and misuse by unauthorized parties.</p>
+    <p>Your assessment responses are stored in a database. We strive to use appropriate security measures to protect this data. (If user accounts were implemented, passwords would be hashed).</p>
+
+    <h3>5. Data Retention</h3>
+    <p>We will retain your session data and assessment responses for as long as necessary for the purposes set out in this Privacy Policy (e.g., to allow for aggregate analysis over time) unless a longer retention period is required or permitted by law. You can typically clear your browser's cookies and site data to remove session identifiers stored on your device. Individual assessment responses stored in our database are not directly tied to PII in the current version without user accounts. (If user accounts were implemented, policies for data deletion upon account closure would be defined).</p>
+    
+    <h3>6. Children's Privacy</h3>
+    <p>This Service is not intended for individuals under the age of 16 (or the relevant age of consent in your jurisdiction). We do not knowingly collect personal information from children under this age. If we become aware that we have collected personal information from a child without verification of parental consent, we will take steps to remove that information from our servers.</p>
+
+    <h3>7. Your Data Protection Rights (General Principles)</h3>
+    <p>Depending on your location, you may have certain rights regarding your personal information, such as the right to access, correct, or delete your data. As we do not currently collect directly identifying PII for the core service, exercising these rights may be limited to the data associated with your current browser session. If you have questions or would like to exercise any potential rights, please contact us.</p>
+
+    <h3>8. Changes to This Privacy Policy</h3>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+
+    <h3>9. Contact Us</h3>
+    <p>If you have questions or comments about this Privacy Policy, please contact us at: [Provide a placeholder email or contact method, e.g., privacy@mindwellnavigator.example.com - ensure this is a monitored address if real]</p>
+    <p><em>[Consider adding specific GDPR/CCPA clauses if targeting users in those regions extensively and collecting PII.]</em></p>
+</section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Consent & Disclaimer - MindWell Navigator{% endblock %}
+
+{% block content %}
+<section class="consent-section">
+    <h2>Important: Consent and Disclaimer</h2>
+    <p>Before you begin, please read the following carefully:</p>
+    
+    <div class="disclaimer-box">
+        <h3>Purpose of this Tool</h3>
+        <p>MindWell Navigator offers a series of questions to help you reflect on your current mental well-being. Based on your responses, it provides a general summary and evidence-based suggestions for enhancing your cognitive and emotional health. </p>
+
+        <h3>Not a Diagnostic Tool</h3>
+        <p><strong>This tool does not provide medical advice, diagnosis, or treatment.</strong> The information and suggestions offered are for general informational and educational purposes only. It is not a substitute for consultation with a qualified healthcare professional (e.g., doctor, psychologist, psychiatrist, or certified counselor). If you have specific concerns about your mental health or are experiencing significant distress, please seek professional help.</p>
+        
+        <h3>Data Handling & Privacy</h3>
+        <p>We take your privacy seriously. Your individual responses are linked to an anonymous session identifier to provide you with personalized results during this session. We may store anonymized and aggregated data for research and service improvement purposes, but your personal identity will not be directly linked if you do not create an account (user accounts are not part of the current version). Please review our full <a href="{{ url_for('privacy') }}" target="_blank">Privacy Policy</a> for more details.</p>
+
+        <h3>Emergency Situations</h3>
+        <p><strong>If you are in a crisis, feeling suicidal, or believe you may be a danger to yourself or others, please do not use this tool. Instead, contact your local emergency services (e.g., 911, 112, 999) immediately, go to the nearest hospital emergency room, or reach out to a crisis hotline.</strong></p>
+    </div>
+
+    <form method="POST" action="{{ url_for('consent') }}" class="consent-form">
+        <div class="form-group">
+            <input type="checkbox" id="consent_checkbox" name="consent_checkbox" value="agreed" required>
+            <label for="consent_checkbox">I have read, understood, and agree to the terms outlined above, and I consent to participate in this self-assessment.</label>
+        </div>
+        {% if error %}
+            <p class="flash flash-error">{{ error }}</p>
+        {% endif %}
+        <button type="submit" class="btn btn-primary">Start Assessment</button>
+    </form>
+    <p class="text-center"><a href="{{ url_for('index') }}">No, I do not wish to proceed.</a></p>
+</section>
+{% endblock %}

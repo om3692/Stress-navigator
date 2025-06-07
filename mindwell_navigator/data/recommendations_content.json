@@ -1,0 +1,94 @@
+{
+    "general_wellbeing_tip": "Remember that small, consistent steps towards self-care can make a big difference in your overall well-being. Be patient and kind to yourself as you explore what works best for you. This assessment is a starting point for reflection, not a diagnosis. If you have ongoing concerns, please consider speaking with a healthcare professional.",
+    "categories": {
+        "Stress": {
+            "low_threshold": 1,
+            "mild_threshold": 2.5,
+            "moderate_threshold": 4,
+            "low": "Your responses suggest you are managing stress well currently. Keep up with healthy coping strategies that work for you!",
+            "mild": "It seems you might be experiencing some mild stress. Consider incorporating short mindfulness breaks (even 2-5 minutes of deep breathing) into your day. Ensuring you make time for hobbies or activities you enjoy can also be beneficial.",
+            "moderate": "Your responses indicate a moderate level of stress. Explore stress-reduction techniques like progressive muscle relaxation, journaling about your stressors, or engaging in regular physical activity (e.g., a 20-30 minute walk daily). Learning to prioritize tasks and saying 'no' to non-essential commitments can also help.",
+            "high": "It appears you are experiencing a high level of stress, which can be challenging. It's important to address this. Consider talking to a trusted friend, family member, or a mental health professional. Actively schedule relaxation activities into your routine and ensure you are getting enough rest."
+        },
+        "Anxiety": {
+            "low_threshold": 1,
+            "mild_threshold": 2.5,
+            "moderate_threshold": 4,
+            "low": "Your anxiety levels appear to be low based on your responses. That's a positive sign for your well-being!",
+            "mild": "You may be experiencing mild anxiety. When anxious thoughts arise, try a simple grounding technique: name 5 things you see, 4 things you can touch, 3 things you hear, 2 things you can smell, and 1 thing you can taste. Gentle, regular exercise can also help manage these feelings.",
+            "moderate": "Your responses suggest a moderate level of anxiety. Practice challenging anxious thoughts: Are they based on facts or feelings? What's an alternative, more balanced perspective? Consider reducing caffeine intake if it's high. Structured problem-solving for specific worries can also be beneficial.",
+            "high": "It seems you are dealing with high levels of anxiety, which can be very difficult. Please consider seeking support from a therapist or counselor who can offer specific strategies like Cognitive Behavioral Therapy (CBT). Mindfulness practices focused on non-judgmental observation of thoughts can also be beneficial when practiced regularly."
+        },
+        "Sleep Quality": {
+            "good_threshold": 1,
+            "fair_threshold": 2.5,
+            "poor_threshold": 4,
+            "good": "Excellent! Your responses indicate your sleep quality is good. Maintaining good sleep is fundamental to overall well-being.",
+            "fair": "Your sleep quality seems fair, with some room for improvement. To enhance your sleep, try to establish a more consistent sleep-wake cycle, even on weekends. Dim the lights and avoid screens (phones, computers, TV) for at least an hour before bed. Ensure your bedroom is cool, dark, and quiet.",
+            "poor": "It looks like your sleep quality is poor. Prioritizing your sleep is important. Create a relaxing bedtime routine (e.g., a warm bath, reading a physical book, light stretching, or listening to calming music). Avoid caffeine and heavy meals late in the evening. If sleep problems persist, consulting a doctor is a good idea.",
+            "very_poor": "Your responses indicate your sleep quality might be very poor, which could be significantly impacting your daily life. It's highly recommended to discuss your sleep with a healthcare professional. They can help rule out underlying issues and suggest effective strategies or treatments."
+        },
+        "Motivation": {
+            "high_threshold": 1,
+            "moderate_threshold": 2.5,
+            "low_threshold": 4,
+            "high": "It's wonderful that your motivation levels appear high! Channel this energy into activities and goals that you find meaningful and enjoyable.",
+            "moderate": "Your motivation seems to be moderate. To boost it, try breaking down larger tasks into smaller, more manageable steps. Celebrate the small wins along the way. Reminding yourself of your 'why' – the deeper reasons behind your goals – can also be a powerful motivator.",
+            "low": "It appears your motivation is currently low. When motivation is lacking, even starting with a very small action (just 5-10 minutes) related to a task can help build momentum. Sometimes, action precedes motivation. Also, ensure you're getting enough rest and proper nutrition, as these significantly impact energy levels. If this feeling persists, talking to someone supportive could be helpful.",
+            "very_low": "Your responses suggest very low motivation, which can be a sign of burnout or other underlying concerns. Please be compassionate with yourself during this time. It's okay to feel this way, and it's a good idea to seek support from a friend, family member, or mental health professional to explore these feelings and find helpful strategies."
+        },
+        "Focus": {
+            "good_threshold": 1,
+            "mild_threshold": 2.5,
+            "moderate_threshold": 4,
+            "good": "Great! Your ability to focus seems to be strong. This is a valuable asset for productivity and presence in daily activities.",
+            "mild": "You might be experiencing some mild difficulties with focus. To enhance concentration, try the Pomodoro Technique (work for 25 minutes, then take a 5-minute break). Minimize distractions in your environment by turning off unnecessary notifications. Remember, single-tasking is generally more effective than multitasking.",
+            "moderate": "Your responses suggest moderate challenges with focus. Ensure you're getting adequate sleep and incorporating some physical activity into your routine, as these can impact concentration. Break tasks into smaller, more manageable chunks. Mindfulness exercises, even short ones, can train your attention over time. Consider if there are specific recurring distractions in your environment or routine that you can address.",
+            "high": "It seems you are facing significant challenges with focus, which can be frustrating. Try to reduce clutter in your workspace, actively turn off notifications, and create dedicated 'focus blocks' in your schedule. If these difficulties persistently impact your daily life, consider discussing them with a healthcare professional to rule out conditions like ADHD or effects of sustained stress/anxiety."
+        },
+        "Emotional Well-being": {
+            "positive_threshold": 1,
+            "mixed_threshold": 2.5,
+            "challenging_threshold": 4,
+            "positive": "It's excellent that you're experiencing positive emotional well-being. Continue to nurture it with activities you enjoy, meaningful connections, and practices that give you a sense of purpose and contentment.",
+            "mixed": "Your emotional well-being seems to have some ups and downs, which is a normal part of life for many. Practice self-compassion, especially on difficult days. Journaling about your feelings or talking to a supportive person can be very helpful for processing emotions. Engage in activities that reliably lift your spirits.",
+            "challenging": "Your responses suggest you may be going through a challenging time emotionally. Be gentle with yourself. Prioritize fundamental self-care: aim for adequate sleep, balanced nutrition, and some form of movement you find enjoyable. Connecting with others or engaging in a relaxing hobby can provide some comfort and perspective.",
+            "distressed": "It appears you are feeling quite distressed emotionally. Please know that you don't have to carry this alone. Reaching out is a sign of strength. Please consider talking to a mental health professional, a trusted friend, or a family member. There are resources and people who want to support you."
+        }
+    },
+    "digital_tools": [
+        {"name": "Insight Timer", "description": "Vast library of free guided meditations, talks, and music for sleep, anxiety, and stress.", "link": "https://insighttimer.com/", "category_tags": ["mindfulness", "sleep", "stress", "anxiety"]},
+        {"name": "Smiling Mind", "description": "Free mindfulness app developed by psychologists and educators, great for all ages.", "link": "https://www.smilingmind.com.au/", "category_tags": ["mindfulness", "stress", "anxiety", "focus"]},
+        {"name": "UCLA Mindful App", "description": "Free app with basic meditations, wellness meditations, and informative videos from the UCLA Mindful Awareness Research Center.", "link": "https://www.uclahealth.org/marc/ucla-mindful-app", "category_tags": ["mindfulness", "stress", "anxiety"]},
+        {"name": "Woebot", "description": "An AI-powered chatbot that uses principles of CBT to help manage mood and learn coping skills (free with optional paid services).", "link": "https://woebothealth.com/", "category_tags": ["cbt", "anxiety", "stress", "emotional_wellbeing"]},
+        {"name": "Headspace", "description": "Subscription-based app with guided meditations, mindfulness exercises, and sleep content. Often offers a free trial.", "link": "https://www.headspace.com/", "category_tags": ["mindfulness", "sleep", "stress", "anxiety", "focus"]},
+        {"name": "Calm", "description": "Subscription-based app for sleep, meditation, and relaxation. Often offers a free trial.", "link": "https://www.calm.com/", "category_tags": ["mindfulness", "sleep", "stress", "anxiety"]},
+        {"name": "Todoist or Microsoft To Do", "description": "Task management apps to help organize tasks, reduce overwhelm, and improve focus (both offer free versions).", "link": "https://todoist.com/", "link_alt": "https://todo.microsoft.com/", "category_tags": ["focus", "stress", "motivation"]},
+        {"name": "Forest: Stay Focused", "description": "App that helps you stay off your phone and focused on your work by planting virtual trees (one-time purchase or subscription).", "link": "https://www.forestapp.cc/", "category_tags": ["focus"]}
+    ],
+    "cognitive_exercises_general": [
+        {"name": "Daily Reading", "description": "Read books, articles, or journals on diverse topics to stimulate your mind and learn new things. Aim for 15-30 minutes daily if possible."},
+        {"name": "Learn a New Skill", "description": "Challenge your brain by learning something new, like a few phrases in a new language, a simple musical piece, a new recipe, or a basic coding concept. Many free resources like Duolingo, YouTube tutorials, or Coursera (audit courses for free) are available."},
+        {"name": "Puzzles and Brain Games", "description": "Engage in activities like Sudoku, crosswords, jigsaw puzzles, or chess. Apps like Luminosity or Elevate offer structured brain training (some free content, mostly subscription). Even simple newspaper puzzles can be beneficial."},
+        {"name": "Mindful Observation", "description": "Pick an everyday object (e.g., a piece of fruit, a plant) and try to observe it in detail for a few minutes – its color, texture, shape, smell, any small details. This helps improve attention and presence."},
+        {"name": "Journaling with Prompts", "description": "Reflect on specific questions, such as 'What am I grateful for today and why?', 'Describe a small challenge I overcame recently and what I learned,' or 'What is one thing I'm looking forward to?'. This encourages introspection, emotional processing, and cognitive organization."}
+    ],
+    "nutrition_tips_general": [
+        {"name": "Balanced Diet", "description": "Focus on a colorful diet rich in fruits, vegetables (aim for variety), whole grains (like oats, brown rice, quinoa), lean proteins (fish, poultry, beans, lentils, tofu), and healthy fats (found in avocados, nuts, seeds, and olive oil)."},
+        {"name": "Omega-3 Fatty Acids", "description": "Incorporate sources of Omega-3s, which are crucial for brain health. Good sources include fatty fish (salmon, mackerel, sardines), flaxseeds (ground), chia seeds, and walnuts."},
+        {"name": "Stay Hydrated", "description": "Dehydration can significantly impair cognitive function, mood, and energy levels. Aim to drink an adequate amount of water throughout the day. Carry a water bottle as a reminder."},
+        {"name": "Limit Processed Foods & Added Sugar", "description": "High intake of heavily processed foods, sugary drinks, and refined sugars can negatively impact mood, energy levels (leading to crashes), and long-term cognitive function. Opt for whole, unprocessed foods where possible."},
+        {"name": "Antioxidant-Rich Foods", "description": "Include foods rich in antioxidants in your diet, as they help protect brain cells from damage. Berries (blueberries, strawberries), dark chocolate (in moderation, >70% cocoa), spinach, kale, and beans are excellent sources."}
+    ],
+    "sleep_hygiene_tips_general": [
+        {"name": "Consistent Schedule", "description": "Go to bed and wake up around the same time each day, even on weekends, to regulate your body's internal clock."},
+        {"name": "Relaxing Bedtime Routine", "description": "Develop a calming pre-sleep ritual, such as taking a warm bath, reading a physical book (not on a screen), light stretching, listening to calming music, or practicing meditation."},
+        {"name": "Optimize Your Bedroom", "description": "Keep your bedroom dark, quiet, cool, and comfortable. Use blackout curtains, earplugs, or a white noise machine if needed."},
+        {"name": "Limit Screen Time Before Bed", "description": "Avoid exposure to blue light from phones, tablets, computers, and TVs for at least 1-2 hours before bedtime, as it can suppress melatonin production."},
+        {"name": "Watch Your Diet", "description": "Avoid large meals, caffeine, nicotine, and alcohol close to bedtime. A light, healthy snack is okay if you're hungry."},
+        {"name": "Get Some Daylight", "description": "Exposure to natural light during the day, especially in the morning, helps regulate your sleep-wake cycle."},
+        {"name": "Exercise Regularly", "description": "Regular physical activity can improve sleep quality, but try to avoid intense workouts close to bedtime."},
+        {"name": "Limit Naps", "description": "If you nap, keep it short (20-30 minutes) and avoid napping late in the day."},
+        {"name": "Don't Toss and Turn", "description": "If you can't fall asleep after 20-30 minutes, get out of bed and do something relaxing until you feel sleepy, then return to bed."}
+    ]
+}

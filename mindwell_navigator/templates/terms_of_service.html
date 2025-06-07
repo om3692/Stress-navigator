@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}Terms of Service - MindWell Navigator{% endblock %}
+
+{% block content %}
+<section class="static-page-section">
+    <h2>Terms of Service</h2>
+    <p><em>Last Updated: {{ now.strftime('%B %d, %Y') }}</em></p>
+
+    <p>Welcome to MindWell Navigator (the "Service"), a web application designed to help users reflect on their mental well-being. These Terms of Service ("Terms") govern your access to and use of our Service. Please read these Terms carefully before using the Service.</p>
+    <p>By accessing or using the Service, you agree to be bound by these Terms and our <a href="{{ url_for('privacy') }}">Privacy Policy</a>. If you disagree with any part of the terms, then you may not access the Service.</p>
+
+    <h3>1. Description of Service</h3>
+    <p>MindWell Navigator provides a series of questions to assess aspects of mental well-being and offers personalized summaries and evidence-based recommendations. The Service is for informational and educational purposes only.</p>
+
+    <h3>2. No Medical Advice</h3>
+    <p><strong>The Service does not provide medical advice, diagnosis, or treatment.</strong> It is not a substitute for professional mental health care or consultation with qualified healthcare providers. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition or mental health concern. Never disregard professional medical advice or delay in seeking it because of something you have read or received from the Service.</p>
+    <p><strong>If you are experiencing a medical or mental health emergency, or if you are in crisis, call your local emergency number (e.g., 911, 112, 999) or go to the nearest emergency room immediately.</strong></p>
+
+    <h3>3. User Responsibilities</h3>
+    <ul>
+        <li>You agree to use the Service responsibly and in accordance with all applicable laws and regulations.</li>
+        <li>You are responsible for the accuracy of the information you provide in the assessment to the best of your ability, as the feedback generated is based on your input.</li>
+        <li>You acknowledge that the insights and recommendations provided are general in nature and may not be suitable for every individual. Your use of any information or materials on this Service is entirely at your own risk, for which we shall not be liable.</li>
+    </ul>
+
+    <h3>4. Intellectual Property</h3>
+    <p>The Service and its original content (excluding user-provided responses), features, and functionality are and will remain the exclusive property of MindWell Navigator and its licensors. This includes, but is not limited to, the text, graphics, logos, icons, images, assessment questions (as compiled and presented), and software. The Service is protected by copyright, trademark, and other laws of [Your Country/Jurisdiction] and foreign countries.</p>
+    <p>You may not copy, reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Service, except for your own personal, non-commercial use as facilitated by the Service.</p>
+
+    <h3>5. User Data and Privacy</h3>
+    <p>Our collection and use of personal information in connection with the Service is described in our <a href="{{ url_for('privacy') }}">Privacy Policy</a>.</p>
+
+    <h3>6. Disclaimers</h3>
+    <p>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. USE OF THE SERVICE IS AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMISSIBLE BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICE AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+    <p>WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE SERVICE'S CONTENT OR THE CONTENT OF ANY WEBSITES LINKED TO THE SERVICE AND WE WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (I) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (II) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF THE SERVICE, (III) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION STORED THEREIN, (IV) ANY INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM THE SERVICE, (V) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE WHICH MAY BE TRANSMITTED TO OR THROUGH THE SERVICE BY ANY THIRD PARTY, AND/OR (VI) ANY ERRORS OR OMISSIONS IN ANY CONTENT AND MATERIALS OR FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF ANY CONTENT POSTED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE VIA THE SERVICE.</p>
+
+    <h3>7. Limitation of Liability</h3>
+    <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL MINDWELL NAVIGATOR, ITS AFFILIATES, DIRECTORS, EMPLOYEES, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES (INCLUDING, WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES) RESULTING FROM (I) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICE; (II) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICE; (III) ANY CONTENT OBTAINED FROM THE SERVICE; AND (IV) UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE, AND EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.</p>
+    <p>OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATING TO THE SERVICE OR THESE TERMS IS LIMITED TO [Specify a nominal amount, e.g., $1 USD or keep general].</p>
+
+    <h3>8. Changes to Terms</h3>
+    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect (e.g., by posting a notice on the Service). What constitutes a material change will be determined at our sole discretion.</p>
+    <p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+
+    <h3>9. Governing Law</h3>
+    <p>These Terms shall be governed and construed in accordance with the laws of [Your State/Country, e.g., "the State of California, United States"], without regard to its conflict of law provisions.</p>
+
+    <h3>10. Contact Us</h3>
+    <p>If you have any questions about these Terms, please contact us at: [Provide a placeholder email or contact method, e.g., terms@mindwellnavigator.example.com]</p>
+</section>
+{% endblock %}
